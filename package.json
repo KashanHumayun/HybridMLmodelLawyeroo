@@ -261,7 +261,7 @@
     "moment": "2.24.0",
     "moment-timezone": "0.5.23",
     "@tryghost/adapter-cache-memory-ttl": "file:components/tryghost-adapter-cache-memory-ttl-5.57.2.tgz",
-    "@tryghost/adapter-cache-redis": "file:components/tryghost-adapter-cache-redis-5.57.2.tgz",
+    "@tryghost/adapter-cache-redis": "file:current/components/tryghost-adapter-cache-redis-5.57.2.tgz",
     "@tryghost/adapter-manager": "file:components/tryghost-adapter-manager-5.57.2.tgz",
     "@tryghost/announcement-bar-settings": "file:components/tryghost-announcement-bar-settings-5.57.2.tgz",
     "@tryghost/api-framework": "file:components/tryghost-api-framework-5.57.2.tgz",
