@@ -276,7 +276,7 @@
     "@tryghost/dynamic-routing-events": "file:current/components/tryghost-dynamic-routing-events-5.57.2.tgz",
     "@tryghost/email-analytics-provider-mailgun": "file:current/components/tryghost-email-analytics-provider-mailgun-5.57.2.tgz",
     "@tryghost/email-analytics-service": "file:current/components/tryghost-email-analytics-service-5.57.2.tgz",
-    "@tryghost/email-content-generator": "file:current/components/tryghost-email-content-generator-5.57.2.tgz",
+    "@tryghost/email-content-generator": "^5.57.2",
     "@tryghost/email-events": "file:current/components/tryghost-email-events-5.57.2.tgz",
     "@tryghost/email-service": "file:current/components/tryghost-email-service-5.57.2.tgz",
     "@tryghost/email-suppression-list": "file:current/components/tryghost-email-suppression-list-5.57.2.tgz",
