@@ -54,10 +54,10 @@
     "lint": "yarn lint:server && yarn lint:shared && yarn lint:frontend && yarn lint:test",
     "prepack": "monobundle"
   },
-  "engines": {
-    "node": "^16.14.0 || ^18.12.1",
-    "cli": "^1.17.0"
-  },
+ "engines": {
+  "node": "<=14.x.x",
+  "npm": "<=6.x.x"
+},
   "dependencies": {
     "@extractus/oembed-extractor": "3.2.1",
     "@sentry/node": "7.60.1",
