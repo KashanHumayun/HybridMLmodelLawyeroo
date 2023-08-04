@@ -5,11 +5,13 @@
     "host": "127.0.0.1"
   },
   "database": {
-    "client": "mysql",
+    "client": "pg",
     "connection": {
-      "host": "localhost",
-      "user": "root",
-      "database": "ghost_blog_prod"
+      "host": "bubble.db.elephantsql.com",
+      "port": "5432",
+      "user": "fmhgmppw",
+      "password": "eQg7bx7kuTZzjBG-13IGWNWDEXS5aY0G",
+      "database": "fmhgmppw"
     }
   },
   "mail": {
@@ -21,8 +23,8 @@
       "stdout"
     ]
   },
-  "process": "systemd",
+  "process": "local",
   "paths": {
-    "contentPath": "C:\\Windows\\System32\\ghost-blog\\content"
+    "contentPath": "C:\\Users\\khan\\Documents\\ghost-blog\\content"
   }
 }
