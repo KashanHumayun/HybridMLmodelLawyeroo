@@ -332,7 +332,7 @@
     "@tryghost/tiers": "file:current/components/tryghost-tiers-5.57.2.tgz",
     "@tryghost/update-check-service": "file:current/components/tryghost-update-check-service-5.57.2.tgz",
     "@tryghost/verification-trigger": "file:current/components/tryghost-verification-trigger-5.57.2.tgz",
-    "@tryghost/version-notifications-data-service": "^5.x.x",
+    "@tryghost/version-notifications-data-service": "^x.x.x",
     "@tryghost/webmentions": "file:current/components/tryghost-webmentions-5.57.2.tgz"
   },
   "nx": {
