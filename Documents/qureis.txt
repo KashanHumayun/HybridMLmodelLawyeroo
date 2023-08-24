@@ -1,0 +1,68 @@
+select employee_id,first_name,job_id,salary
+from employees 
+where salary >= 1100 or job_id='IT_PROG';
+
+
+select job_id,min_salary
+from jobs
+where job_title='president' or max_salary=40000;
+
+select country_id, country_name
+from countries
+where country_name='Argentina' or region_id=4;
+
+select first_name,job_id
+from employees
+where Job_id Not in('ST_CLERK' , 'programmer');
+
+select first_name,job_id,salary
+from employees
+where job_id='ST_CLERK' or
+job_id ='IT_PROG' and salary>6000;
+
+order dby clause
+orders the data
+
+select first_name
+from employees
+order by first_name;
+
+select first_name
+from employees
+order by first_name desc;
+
+select last_name
+from employees
+where department_id=80 
+order by last_name desc;
+
+select country_name
+from countries
+order by country_name desc;
+
+signle row function::::::::::::::::
+one output
+
+
+Multiple row function:::::::::::::::
+one output
+
+Character Manipulations Function:
+concat
+substr
+length
+instr(inner String)
+Lpad :right justifies:
+select lpad(salary,10,'#')
+from employees;
+
+
+Rpad :Left Justifies
+select rpad(salary,10,'#')
+from employees;
+
+select lower(first_name),upper(first_name),initcap(first_name)
+from employees;
+
+select initcap('first_name')
+from dual;

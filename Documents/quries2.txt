@@ -1,0 +1,41 @@
+%%%Number function
+
+lab 3
+
+..round:
+specify number after comma;
+
+
+..Trunc:
+same as round but dont round off it discard it
+
+..Mod:
+shows remainder
+
+..query:
+select round(44.659,2),round(44.64,1),
+trunc(44.659),mod(3000,100)
+from dual;
+..data:
+ROUND(44.659,2)	ROUND(44.64,1)	TRUNC(44.659)	MOD(3000,100)
+44.66			44.6				44			0
+
+
+..query:
+select mod(salary,400)
+from employees;
+
+..data:
+0
+200
+200
+200
+0
+0
+0
+200
+8
+
+%%%DateFormat%%
+
+
