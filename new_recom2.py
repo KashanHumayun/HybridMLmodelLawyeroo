@@ -367,13 +367,18 @@ def get_recommendations():
 
     try:
         recommendations = combined_recommendation(client_id)
-        result = recommendations.to_dict(orient="records")
+        
+        # Set 'years_of_experience' to 0 if NaN
+        recommendations['years_of_experience'] = recommendations['years_of_experience'].fillna(0)
+        
+        # Prepare to filter out NaN values properly
+        result = recommendations.apply(lambda x: x.dropna().to_dict(), axis=1).tolist()
+        
         return jsonify({"recommended_lawyers": result}), 200
-
-        return jsonify({"recommended_lawyers": recommended_lawyers.to_dict(orient="records")}), 200
     except Exception as e:
         logger.error(f"Error during recommendation for client {client_id}: {e}")
         return jsonify({"error": str(e)}), 500
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=8000)
