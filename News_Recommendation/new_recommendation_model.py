@@ -192,7 +192,8 @@ app = Flask(__name__)
 def recommend_news():
     global tfidf, knn, combined_df
     user_id = request.json.get('user_id')
-    api_key = '31a6e9bd038e47d8aa7e555b1d1ce0bd'
+    # api_key = '31a6e9bd038e47d8aa7e555b1d1ce0bd'
+    api_key = 'fdf1b308b37c4b1c89b483caaceced1b'
     # Validate global variables
     if tfidf is None or knn is None or combined_df is None:
         logger.error("Recommendation model not initialized properly. tfidf, knn, or combined_df is None.")

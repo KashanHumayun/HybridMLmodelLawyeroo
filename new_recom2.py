@@ -140,13 +140,24 @@ def retrain_model():
     global lawyers_df, clients_df, interactions_df, ratings_df, views_df
     global specializations_binarized, preferences_binarized, client_interaction_matrix, combined_client_features
     global tf_client_features, tf_lawyer_features, hyb_model
+
     # Fetch new data from Firebase
     lawyers, clients, interactions, ratings, views = fetch_data()
     lawyers_df, clients_df, interactions_df, ratings_df, views_df = transform_data(lawyers, clients, interactions, ratings, views)
+
+    # Ensure 'preferences' column contains only iterable values
+    clients_df['preferences'] = clients_df['preferences'].apply(lambda x: x if isinstance(x, list) else [])
+
+    # Fit the MultiLabelBinarizer with the preferences data
+    mlb.fit(clients_df['preferences'])
     
+    # Binarize preferences data after fitting
+    preferences_binarized = mlb.transform(clients_df['preferences'])
+
     # Binarize new data
     specializations_binarized = mlb.fit_transform(lawyers_df['specializations'])
-    preferences_binarized = mlb.transform(clients_df['preferences'])
+
+    # Process interactions
     client_interaction_matrix = process_interactions(interactions_df, lawyers_df, clients_df)
     
     # Combine new feature vectors
